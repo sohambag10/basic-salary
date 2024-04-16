@@ -3,15 +3,19 @@
 
 using namespace std;
 
-bool doesPatternExist(const string& s, const string& pattern) {
-    return s.find(pattern) != string::npos;
+bool findPattern(const string& text, const string& pattern) {
+  return text.find(pattern) != string::npos;
 }
 
 int main() {
-    string s = "I am studying in college";
-    string pattern = "soham";
+  string text = "I am studying in college";
+  string pattern = "col";
 
-    cout << boolalpha << doesPatternExist(s, pattern) << endl;
+  if (findPattern(text, pattern)) {
+    cout << "True" << endl;
+  } else {
+    cout << "False" << endl;
+  }
 
-    return 0;
+  return 0;
 }
